@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #d3d3d3 0%, #a9a9a9 100%); /* Szürke gradient háttér, mint korábban */
+    color: #333; /* Fekete szöveg a fehér helyett */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%; /* Keskenyebb konténer, hogy 80%-os nagyítással FHD-n jól nézzen ki */
+}
+
+header {
+    padding: 40px 0;
+    background: #ffffff; /* Fehér háttér a fejlécben */
+    color: #007bff; /* Kék szöveg a fehér helyett */
+    border: 1px solid #007bff; /* Kék border a fehér helyett */
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-name {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center; /* Középre igazítás */
+    width: 50%; /* A két oszlop közé igazításhoz */
+    align-self: center;
+    color: #007bff; /* Kék szöveg */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    height: 333px; /* Nagyobb magasság a képhez */
+}
+
+.profile-pic {
+    width: 250px; /* Nagyobb szélesség */
+    height: 333px; /* Nagyobb magasság */
+    object-fit: cover;
+    border-radius: 15px; /* Lekerekített sarkok */
+    margin-left: 40px; /* Térköz a bal széltől */
+    align-self: center;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-columns {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex: 1;
+}
+
+.contact-column {
+    flex: 1;
+    max-width: 400px; /* Korlátozott szélesség az olvashatóság érdekében */
+}
+
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Nagyobb térköz az elemek között */
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Növeljük az ikon és szöveg közötti térközt */
+    font-size: 1.1rem; /* 10%-kal nagyobb betűméret */
+    color: #333; /* Fekete szöveg */
+}
+
+.contact-list i {
+    color: #007bff; /* Kék ikonok */
+    font-size: 1.1rem; /* 10%-kal nagyobb ikonméret */
+}
+
+.contact-list a {
+    color: #007bff; /* Kék linkek */
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    background: #ffffff; /* Fehér háttér a buborékban, mint korábban */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #007bff; /* Kék border a fehér helyett */
+    width: 80%; /* Keskenyebb buborékok */
+    max-width: 960px; /* FHD-n 80%-os nagyítással maximális szélesség */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    color: #007bff; /* Kék címek */
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-bottom: 2px solid #007bff; /* Kék alsó vonal */
+    padding-bottom: 5px;
+}
+
+.experience {
+    margin-bottom: 20px;
+}
+
+.company {
+    background: #ffffff; /* Fehér háttér a buborékban */
+    padding: 15px;
+    border: 1px solid #007bff; /* Kék border */
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.2s ease;
+    width: 100%; /* Teljes szélesség a szülőhöz képest */
+}
+
+.company:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.company h3 {
+    font-size: 1.3rem;
+    color: #333; /* Fekete szöveg */
+    margin-bottom: 10px;
+}
+
+.company-name {
+    font-size: 1.2rem;
+    color: #007bff; /* Kék szöveg */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.period {
+    font-style: italic;
+    color: #666; /* Szürke szöveg */
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666; /* Szürke szöveg */
+    line-height: 1.4;
+}
+
+.education {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #ffffff; /* Fehér háttér a bekezdéseknek */
+    border: 1px solid #007bff; /* Kék border */
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    width: 100%; /* Teljes szélesség a szülőhöz képest */
+}
+
+.education:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education h3 {
+    font-size: 1.3rem;
+    color: #333; /* Fekete szöveg */
+}
+
+.education p {
+    margin: 5px 0;
+    color: #666; /* Szürke szöveg */
+}
+
+.education em {
+    font-style: italic;
+    color: #666; /* Szürke a szürke helyett */
+}
+
+.education a {
+    color: #007bff; /* Kék linkek */
+}
+
+.education a:hover {
+    color: #0056b3; /* Sötétebb kék hover effekt */
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%; /* Teljes szélesség a szülőhöz képest */
+}
+
+.skill-bubble {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background: #ffffff; /* Fehér háttér a buborékban */
+    border: 1px solid #007bff; /* Kék border */
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    color: #333; /* Fekete szöveg */
+    width: auto; /* Automatikus szélesség, hogy igazodjon a tartalomhoz */
+}
+
+.skill-bubble:hover {
+    background: #e9ecef; /* Halvány szürke hoverkor */
+    color: #333; /* Fekete szöveg hoverkor */
+    transform: translateY(-3px);
+}
+
+.section p {
+    margin: 10px 0;
+    padding: 10px;
+    background: #ffffff; /* Fehér háttér */
+    border: 1px solid #007bff; /* Kék border */
+    border-radius: 8px;
+    color: #333; /* Fekete szöveg */
+    width: 100%; /* Teljes szélesség a szülőhöz képest */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 0;
+    }
+
+    .header-name {
+        font-size: 2rem;
+        width: 100%; /* Mobilon teljes szélesség */
+    }
+
+    .header-content {
+        height: auto;
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .profile-pic {
+        width: 166px; /* Arányosan kisebb mobilon */
+        height: 222px;
+        margin: 0 auto 10px;
+    }
+
+    .contact-columns {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .contact-column {
+        max-width: none;
+    }
+
+    .contact-list {
+        gap: 15px;
+    }
+
+    .contact-list li {
+        font-size: 1rem; /* Mobilon kisebb betűméret */
+    }
+
+    .contact-list i {
+        font-size: 1rem; /* Mobilon kisebb ikonméret */
+    }
+
+    .container {
+        width: 90%; /* Mobilon valamivel szélesebb, hogy kitöltse a helyet */
+    }
+
+    .section {
+        width: 100%; /* Mobilon teljes szélesség */
+        max-width: none;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .company h3 {
+        font-size: 1.1rem;
+    }
+
+    .company-name {
+        font-size: 1rem;
+    }
+
+    .period, .description {
+        font-size: 0.8rem;
+    }
+
+    .skill-bubble {
+        font-size: 0.9rem;
+        width: auto; /* Mobilon automatikus szélesség */
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1536px; /* 80% FHD-n, 4K-n arányosan alkalmazkodik */
+        width: 80%;
+    }
+
+    .header-name {
+        font-size: 3rem;
+    }
+
+    .header-content {
+        height: 444px; /* Nagyobb magasság 4K-n */
+    }
+
+    .profile-pic {
+        width: 333px; /* Nagyobb szélesség 4K-n */
+        height: 444px;
+        margin-left: 60px; /* Nagyobb térköz 4K-n */
+    }
+
+    .contact-list {
+        gap: 30px;
+    }
+
+    .contact-list li {
+        font-size: 1.2rem; /* 4K-n kicsit nagyobb betűméret */
+    }
+
+    .contact-list i {
+        font-size: 1.2rem; /* 4K-n kicsit nagyobb ikonméret */
+    }
+
+    .section {
+        max-width: 1229px; /* 80% FHD-n, 4K-n arányosan alkalmazkodik */
+    }
+
+    .section h2 {
+        font-size: 2.2rem;
+    }
+
+    .company h3 {
+        font-size: 1.5rem;
+    }
+
+    .company-name {
+        font-size: 1.4rem;
+    }
+
+    .period, .description {
+        font-size: 1rem;
+    }
+
+    .skill-bubble {
+        font-size: 1.2rem;
+    }
+}
